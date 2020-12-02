@@ -91,6 +91,7 @@ a {
   background: url(../img/background.png) 0 0/100% 100% no-repeat;
   width: 100%;
   height: 100vh;
+  position: relative;
 }
 
 .page__firstdisplay_nav_list_link {
@@ -101,7 +102,7 @@ a {
 .page__firstdisplay_nav_list_link:after {
   display: block;
   content: "";
-  height: 2px;
+  min-height: 2px;
   width: 0%;
   background-color: #fff;
   transition: width .3s ease-in-out;
@@ -113,7 +114,7 @@ a {
 }
 
 .page__firstdisplay__nav_nav {
-  width: 800px;
+  max-width: 75%;
   margin: 0 auto;
 }
 
@@ -127,16 +128,19 @@ a {
   font-weight: 600;
 }
 
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
 .page__firstdisplay__titles {
   font-size: 36px;
   text-transform: uppercase;
   color: #fff;
   text-align: center;
-  position: absolute;
-  top: 45%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
 }
 
 .page__firstdisplay__subtitles {
@@ -145,11 +149,10 @@ a {
   text-transform: lowercase;
   color: #fff;
   text-align: center;
-  position: absolute;
-  top: 51%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+}
+
+.page__firstdisplay__subtitles {
+	padding: 5% 0 10% 0;
 }
 
 .page__firstdisplay__btn {
@@ -159,11 +162,6 @@ a {
 
 .page__firstdisplay__btn_btn {
   font-weight: 600;
-  position: absolute;
-  top: 58%;
-  left: 49.7%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
   background: #16a085;
   padding: 15px 25px;
   border-radius: 3px;
@@ -182,24 +180,34 @@ a {
 }
 
 .page__firstdisplay_buttonbar {
-  max-width: 200px;
+  max-width: 40%;
   position: absolute;
   bottom: 0;
   left: 50%;
   margin-right: -50%;
   transform: translateX(-50%);
 }
-
+/*
+.page__firstdisplay__nav_2 {
+  max-width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+*/
 /*Second Display*/
 
-.page__seconddisplay {
-  background: #f5f6f7;
-  position: relative;
+.bg_d2 {
+	background: #f5f6f7;
+	position: relative;
+	padding: 8% 0;
 }
 
-.page__seconddisplay_image {
-  float: right;
-  padding: 100px 80px 0 0;
+.page__seconddisplay {
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
 }
 
 .page__seconddisplay__text h2 {
@@ -209,17 +217,16 @@ a {
   max-width: 280px;
   text-transform: uppercase;
   line-height: 23px;
-  padding-bottom: 20px;
 }
 
 .page__seconddisplay__text p {
   font-size: 12px;
   line-height: 25px;
+  padding: 1.5% 0 3% 0;
 }
 
 .page__seconddisplay__text {
-  padding: 100px 0 0 90px;
-  height: 509px;
+  max-width: 40%;
 }
 
 .page__seconddisplay__text_text {
@@ -227,14 +234,11 @@ a {
 }
 
 .page__seconddisplay__text__btn {
+  max-width: 135px;
   font-weight: 600;
-  position: absolute;
-  top: 77%;
-  left: 6.7%;
   background: #16a085;
   padding: 15px 25px;
   border-radius: 3px;
-
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -243,6 +247,11 @@ a {
   box-shadow: 0px 3px 10px #16a085;
 }
 
+.image_d2 {
+	position: absolute;
+	bottom: 0;
+	right: 5%;
+}
 
 /*Third Display*/
 
@@ -250,12 +259,13 @@ a {
   width: 100%;
   height: 500px;
   position: relative;
+  margin-bottom: 3%;
 }
 
 .page__thirddisplay__text {
   position: absolute;
   top: 26%;
-  left: 52.1%;
+  left: 57.1%;
 }
 
 .page__thirddisplay__text h5{
@@ -269,6 +279,7 @@ a {
   max-width: 60%;
   line-height: 20px;
   padding-top: 4%;
+  padding-bottom: 70px;
 }
 
 .page__thirddisplay__image {
@@ -284,12 +295,11 @@ a {
 .page__thirdisplay__btn_btn {
   font-weight: 600;
   position: absolute;
-  top: 70%;
-  right: 38%;
+  bottom: 0%;
+  left: 0;
   background: #16a085;
   padding: 15px 25px;
   border-radius: 3px;
-
   font-size: 12px;
   text-transform: uppercase;
 }
@@ -301,30 +311,33 @@ a {
 /*Fourth Display*/
 
 .page__fourthdisplay {
+  width: 100%;
   background: #f5f6f7;
-  position: relative;
   height: 100%;
-}
-
-.page__fourthdisplay__topbar__image {
-  position: absolute;
-  top: 13%;
-  left: 15%;
+  position: relative;
 }
 
 .page__fourthdisplay__topbar__image img {
-  width: 100px;
-  height: 100px;
+  min-width: 100px;
+  min-height: 100px;
 }
 
 .page__fourthdisplay__topbar__hr {
-  position: absolute;
-  top: 10%;
-  left: 40%;
+  padding: 0 10%;
 }
 
 .page__fourthdisplay__topbar {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 7% 3% 0 10%;
+}
+
+.page__fourthdisplay__topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page__fourthdisplay__topbar__title h4{
@@ -332,24 +345,13 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 3px;
-}
-
-.page__fourthdisplay__topbar__title {
-  position: absolute;
-  top: 10%;
-  left: 63%;
-}
-
-.page__fourthdisplay__topbar__text_p {
-  position: absolute;
-  top: 16%;
-  left: 56.5%;
+  padding-bottom: 3%;
 }
 
 .page__fourthdisplay__topbar__text_p p{
   font-size: 12px;
-  max-width: 60%;
   line-height: 15px;
+  margin: 0 auto;
 }
 
 #gallery {
@@ -395,14 +397,10 @@ a {
   cursor: zoom-out;
 }
 
-.page__fourthdisplay__photo {
-  padding: 0 30px;
-  padding-top: 10%;
-}
-
 /*Fifthy Display*/
 
 .page__fifthdisplay {
+  width: 100%;
   position: relative;
 }
 
@@ -435,7 +433,7 @@ a {
 }
 
 .page__fifthdisplay__form_form_label_input {
-  height: 50px;
+  min-height: 50px;
   border-radius: 5px;
 }
 
@@ -464,8 +462,8 @@ a {
 .page__fifthdisplay__form_form__img__pos__img {
   position: relative;
   background: #16a085;
-  width: 50px;
-  height: 50px;
+  min-width: 50px;
+  min-height: 50px;
   border-radius: 5px;
   padding-left: 10px;
 }
@@ -476,13 +474,13 @@ a {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
-  width: 25px;
-  height: 20px;
+  min-width: 25px;
+  min-height: 20px;
 }
 
 .page__fifthdisplay__form_form__img__pos__img_img:hover {
-  width: 30px;
-  height: 25px;
+  min-width: 30px;
+  min-height: 25px;
 }
 
 /*Sixth Display*/
@@ -490,7 +488,7 @@ a {
 .page__sixthdisplay {
   background: #f5f6f7;
   width: 100%;
-  height: 300px;
+  min-height: 300px;
 }
 
 .page_sithdisplay_text h3 {
@@ -514,9 +512,12 @@ a {
 
 .page_sithdisplay_text__images {
   display: flex;
-  justify-content: space-between;
-  max-width: 40%;
+  justify-content: center;
   margin: 0 auto;
+}
+
+.div_p {
+	width: 5%;
 }
 
 .page_sithdisplay_text__images__image {
@@ -524,8 +525,8 @@ a {
   background: #1abc9c;
   border-radius: 1px;
   text-transform: uppercase;
-  width: 200px;
-  height: 40px;
+  min-width: 200px;
+  min-height: 40px;
   padding: 14px 0 10px 15px;
   letter-spacing: 3px;
   position: relative;
@@ -536,14 +537,14 @@ a {
   top: 0;
   right: 0;
   background: #16a085;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 7px 0 7px 9px;
 }
 
 .page_sithdisplay_text__images__image_img img:hover {
-  width: 22px;
-  height: 25px;
+  min-width: 22px;
+  min-height: 25px;
 }
 
 .page_sithdisplay_text__images__image:hover {
@@ -555,8 +556,8 @@ a {
   background: #1abc9c;
   border-radius: 1px;
   text-transform: uppercase;
-  width: 200px;
-  height: 40px;
+  min-width: 200px;
+  min-height: 40px;
   padding: 14px 0 10px 15px;
   letter-spacing: 3px;
   position: relative;
@@ -567,8 +568,8 @@ a {
   top: 0;
   right: 0;
   background: #16a085;
-  width: 40px;
-  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
   padding: 5px 0 5px 8px;
 }
 
@@ -577,13 +578,14 @@ a {
 }
 
 .page_sithdisplay_text__images__image_2_img img:hover {
-  width: 26px;
-  height: 30px;
+  min-width: 26px;
+  min-height: 30px;
 }
 
 /*Footer Display*/
 
 .page__footer {
+  width: 100%;
   background: #fff;
   display: flex;
   justify-content: space-between;
@@ -640,4 +642,83 @@ a {
 
 .page__footer__text_image {
   padding: 30px 50px 30px 0;
+}
+
+/*Адаптив*/
+
+/*@media (max-width: 1920px) {
+	.page__firstdisplay {
+		background: #000;
+	}
+}*/
+
+@media (max-width: 992px) {
+	.bg_d2 {
+		padding-bottom: 0;
+	}
+	.page__seconddisplay {
+		max-width: 100%;
+	}
+	.page__seconddisplay__text {
+		margin: 0 auto;
+		text-align: center;
+		max-width: 80%;
+		margin-bottom: 5%;
+	}
+	.page__seconddisplay__text h2,
+	.page__seconddisplay__text__btn {
+		margin: 0 auto;
+	}
+	.image_d2 {
+		position: static;
+		text-align: center;
+	}
+}
+
+@media (max-width: 767px) {
+	.page__firstdisplay__nav {
+		display: none;
+	}
+/*Sixth*/
+	.page_sithdisplay_text__images {
+		display: block;
+		max-width: 30%;
+		margin: 0 auto;
+	}
+	.page_sithdisplay_text__images__image {
+		margin-bottom: 5%;
+	}
+	.page_sithdisplay_text p {
+		padding-bottom: 3%;
+	}
+	/*Footer*/
+	.page__footer {
+		font-size: 12px;
+	}
+	.page__footer__text {
+		display: block;
+	}
+	.page__footer__text__links_link1 {
+		padding: 0;
+	}
+	.page__footer__text__links_link2 {
+		border-right: 0;
+		border-left: 0;
+		padding: 0;
+	}
+	.page__footer__text__links_link1:hover {
+		font-size: 13px;
+		text-decoration: underline;
+	}
+	.page__footer__text__links_link2:hover {
+		font-size: 13px;
+		text-decoration: underline;
+	}
+	.page__footer__text__links_link3{
+		width: 100%;
+	}
+	.page__footer__text__links_link3:hover {
+		font-size: 13px;
+		text-decoration: underline;
+	}
 }
