@@ -188,8 +188,12 @@ a {
   transform: translateX(-50%);
 }
 
-.burger{
+.burger {
   display: none;
+}
+
+.menu {
+  background: rgb(0, 0, 0, 0.2);
 }
 
 /*Second Display*/
@@ -641,7 +645,6 @@ a {
 }
 
 /*Адаптив*/
-
 @media (max-width: 992px) {
 	/*Second*/
 	.bg_d2 {
@@ -678,14 +681,11 @@ a {
 }
 
 @media (max-width: 767px) {
-	.page__firstdisplay_nav_list_link {
-		display: none;
-	}
 	.burger {
 		display: block;
 	}
-	.page__firstdisplay__nav {
-		background: rgb(0, 0, 0, 0.2);
+	.page__firstdisplay_nav_list_link {
+		display: none;
 	}
 /*Sixth*/
 	.page_sithdisplay_text__images {

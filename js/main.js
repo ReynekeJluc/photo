@@ -1,5 +1,5 @@
 $(function () {
-	$('.page__firstdisplay__nav').click(function () {
-		$('.menu').toggleClass('show-open')
+	$('.burger').click(function () {
+		$('.page__firstdisplay__nav').toggleClass('.menu')
 	})
 });
